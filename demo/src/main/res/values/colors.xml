@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimaryDark">#00ae7d</color>
+    <color name="colorPrimary">#00ce7d</color>
+    <color name="navigationBarColor">@android:color/black</color>
+    <color name="colorAccent">@color/colorPrimary</color>
+    <color name="windowBackground">@android:color/white</color>
+
+    <color name="colorPrimaryTrans">#CC00ce7d</color>
+
+    <color name="imoocstyle">#CA0612</color>
+
+    <color name="black_dark">#333333</color>
+    <color name="black_middle">#666666</color>
+
+    <color name="category_backgroundColor">#F2F2F2</color>
+    <color name="category_textColor">#848484</color>
+</resources>

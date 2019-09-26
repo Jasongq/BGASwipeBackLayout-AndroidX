@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    style="@style/MatchMatch.Vertical"
+    android:background="@android:color/white"
+    android:fitsSystemWindows="true">
+
+    <com.google.android.material.appbar.AppBarLayout
+        style="@style/MatchWrap"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+        <include layout="@layout/inc_toolbar"/>
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/tabLayout"
+            style="@style/MatchWrap"
+            android:textAppearance="@style/TextAppearance.AppCompat.Title"
+            app:tabIndicatorColor="#aaaa55"
+            app:tabIndicatorHeight="3dp"
+            app:tabMode="fixed"
+            app:tabSelectedTextColor="#cccccc"
+            app:tabTextColor="@android:color/white"/>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <ScrollView
+        style="@style/MatchMatch"
+        android:overScrollMode="never"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            style="@style/MatchMatch.Vertical"
+            android:gravity="center_horizontal">
+
+            <androidx.viewpager.widget.ViewPager
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/onlyTrackingLeftEdgeSwitch"
+                style="@style/WrapWrap"
+                android:checked="true"
+                android:padding="@dimen/size_level3"
+                android:text="仅仅跟踪左侧边缘的滑动返回"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/swipeBackEnableSwitch"
+                style="@style/WrapWrap"
+                android:checked="true"
+                android:padding="@dimen/size_level3"
+                android:text="滑动返回可用"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/weChatStyleSwitch"
+                style="@style/WrapWrap"
+                android:checked="true"
+                android:padding="@dimen/size_level3"
+                android:text="微信滑动返回样式"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/needShowShadowSwitch"
+                style="@style/WrapWrap"
+                android:checked="true"
+                android:padding="@dimen/size_level3"
+                android:text="显示滑动返回的阴影效果"/>
+
+            <androidx.appcompat.widget.SwitchCompat
+                android:id="@+id/shadowAlphaGradientSwitch"
+                style="@style/WrapWrap"
+                android:checked="true"
+                android:padding="@dimen/size_level3"
+                android:text="阴影区域的透明度根据滑动的距离渐变"/>
+
+            <EditText
+                style="@style/MatchWrap"
+                android:layout_margin="@dimen/size_level1"
+                android:gravity="center"
+                android:hint="测试滑动返回时自动关闭软键盘"
+                android:singleLine="true"
+                android:text="测试滑动返回时自动关闭软键盘"/>
+
+            <Button
+                style="@style/DemoBtn"
+                android:onClick="testSwipeDelete"
+                android:text="测试滑动删除"/>
+
+            <Button
+                style="@style/DemoBtn"
+                android:onClick="testTranslucent"
+                android:text="TestTranslucent"/>
+
+            <Button
+                style="@style/DemoBtn"
+                android:onClick="testPullRefreshAndWebView"
+                android:text="测试下拉刷新和 WebView"/>
+
+            <Button
+                style="@style/DemoBtn"
+                android:layout_marginBottom="@dimen/size_level2"
+                android:onClick="testRecyclerView"
+                android:text="测试 RecyclerView"/>
+
+        </LinearLayout>
+    </ScrollView>
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

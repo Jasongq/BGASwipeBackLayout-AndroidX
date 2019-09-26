@@ -1,0 +1,34 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion ANDROID_BUILD_SDK_VERSION as int
+
+    defaultConfig {
+        minSdkVersion ANDROID_BUILD_MIN_SDK_VERSION as int
+        targetSdkVersion ANDROID_BUILD_TARGET_SDK_VERSION as int
+        versionCode VERSION_CODE as int
+        versionName VERSION_NAME
+    }
+}
+
+dependencies {
+    // 下面两个依赖是必须的
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    //implementation 'cn.bingoogolapple:bga-swipebacklayout:1.2.0@aar'  9.0系统会侧滑返回会闪屏
+    //implementation 'com.github.Jasongq:BGASwipeBackLayout-Android:v1.2.1-alpha'
+
+    // 上面两个依赖是必须的
+    implementation project(':library')
+
+    // 下面的依赖不是必须的，只是为了方便演示 demo
+    implementation 'cn.bingoogolapple:bga-baseadapter:1.2.9@aar'
+    implementation 'cn.bingoogolapple:bga-refreshlayout:1.1.8@aar'
+    implementation 'cn.bingoogolapple:bga-progressbar:1.0.1@aar'
+    implementation 'cn.bingoogolapple:bga-swipeitemlayout:1.0.4@aar'
+    implementation 'com.google.android.material:material:1.0.0'
+    implementation 'androidx.palette:palette:1.0.0'
+    implementation 'androidx.recyclerview:recyclerview:1.0.0'
+    implementation 'com.jaeger.statusbaruitl:library:1.4.0'
+    debugImplementation 'com.squareup.leakcanary:leakcanary-android:1.5.4'
+    releaseImplementation 'com.squareup.leakcanary:leakcanary-android-no-op:1.5.4'
+}

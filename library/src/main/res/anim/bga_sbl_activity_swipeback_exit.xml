@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+           android:duration="10"
+           android:fromXDelta="0"
+           android:fromYDelta="0"
+           android:toXDelta="100%p"
+           android:toYDelta="0"/>
+
+<!-- 以下这个在Android 9.0系统上侧滑返回的时候会闪一下
+<translate xmlns:android="http://schemas.android.com/apk/res/android"
+android:duration="0"
+android:fromXDelta="100%p"
+android:fromYDelta="0"
+android:toXDelta="100%p"
+android:toYDelta="0"/>-->
