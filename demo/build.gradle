@@ -15,7 +15,7 @@ dependencies {
     // 下面两个依赖是必须的
     implementation 'androidx.legacy:legacy-support-v4:1.0.0'
     //implementation 'cn.bingoogolapple:bga-swipebacklayout:1.2.0@aar'  9.0系统会侧滑返回会闪屏
-    //implementation 'com.github.Jasongq:BGASwipeBackLayout-Android:v1.2.1-alpha'
+    //implementation 'com.github.Jasongq:BGASwipeBackLayout-AndroidX:v1.2.1-alpha'
 
     // 上面两个依赖是必须的
     implementation project(':library')
